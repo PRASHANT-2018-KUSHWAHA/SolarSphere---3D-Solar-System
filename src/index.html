@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the document type as HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Sets the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Tutorial</title>
+    <style>
+        /* Removes default margin from the body for a full-screen canvas */
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Vertex shader: Defines how vertices are transformed -->
+    <script id="vertexShader" type="vertex">
+        void main() {
+            // Calculates the position of each vertex in clip space
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+    
+    <!-- Fragment shader: Defines the color of each pixel -->
+    <script id="fragmentShader" type="fragment">
+        void main() {
+            // Sets the fragment color to a reddish hue
+            gl_FragColor = vec4(1.0, 0.1, 0.3, 1.0);
+        }
+    </script>
+    
+    <!-- Links to the main JavaScript file -->
+    <script src="./js/scripts.js" type="module"></script>
+</body>
+</html>
