@@ -2,9 +2,10 @@
   "name": "threetut",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./src/index.html",
+    "start": "parcel ./src/index.html"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "three": "^0.133.0"
   },
   "devDependencies": {
-    "@parcel/transformer-image": "^2.0.0-rc.0"
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "parcel": "^2.13.3"
   }
 }
